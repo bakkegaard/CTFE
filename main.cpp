@@ -12,7 +12,26 @@ struct factorial<0>{
 	enum {value=1};
 };
 
+template<int n>
+struct fibonacci{
+	enum { value= fibonacci<n-1>::value+fibonacci<n-2>::value};
+};
+
+
+template<>
+struct fibonacci<0>{
+	enum{value=0};
+};
+template<>
+struct fibonacci<1>{
+	enum{value=1};
+};
+
 int main(){
-	int fac= factorial<4>::value;
+	int fac= factorial<5>::value;
 	cout << fac << endl;
+
+	int fib= fibonacci<7>::value;
+	cout << fib << endl;
+	
 }
