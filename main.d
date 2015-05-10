@@ -11,9 +11,9 @@ int fibonacci(int i){
 }
 
 void main(){
-	static int fac= factorial(5);
-	writeln(fac);
+	const int fac= factorial(5);
+	pragma(msg,fac)
 
-	static int fib= fibonacci(7);
-	writeln(fib);
+	const int fib= fibonacci(7);
+	pragma(msg,fib);
 }

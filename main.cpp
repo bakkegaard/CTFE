@@ -28,10 +28,13 @@ struct fibonacci<1>{
 };
 
 int main(){
-	int fac= factorial<5>::value;
+
+	const int fac= factorial<5>::value;
+
 	cout << fac << endl;
 
-	int fib= fibonacci<7>::value;
+	const int fib= fibonacci<7>::value;
+
 	cout << fib << endl;
 	
 }
